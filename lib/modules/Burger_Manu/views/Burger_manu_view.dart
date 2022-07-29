@@ -1,12 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:intro_slider/intro_slider.dart';
-import 'package:intro_slider/slide_object.dart';
 import '../../../global_widgets/textEnter.dart';
 import '../../../routes/app_pages.dart';
-import '../../../utils/image_helper.dart';
 import '../controllers/Burger_manu_controller.dart';
 
 class Burger_manu_View extends GetView<Burger_manu_Controller> {
@@ -28,7 +24,7 @@ class Burger_manu_View extends GetView<Burger_manu_Controller> {
                   // Obx(() =>
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    child: Image.asset("Images/Burger_backgraund.png",fit: BoxFit.fill),
+                    child: Image.asset("assets/Images/Burger_backgraund.png",fit: BoxFit.fill),
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -159,7 +155,7 @@ class Burger_manu_View extends GetView<Burger_manu_Controller> {
 
                           Container(
                             // width: MediaQuery.of(context).size.width,
-                            child: Image.asset("Images/Cartun_Burger.png",fit: BoxFit.cover,height: 300,width: 195,),
+                            child: Image.asset("assets/Images/Cartun_Burger.png",fit: BoxFit.cover,height: 300,width: 195,),
                           ),
 
                         ],),

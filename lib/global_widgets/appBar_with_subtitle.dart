@@ -2,41 +2,62 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-AppBar appbarSubTITLE(String title, String sub_title, Function onTap) =>
+AppBar appbarSubTITLE(String sub_title, Function onTap) =>
     AppBar(
       iconTheme: IconThemeData(
-        color: Colors.black, //change your color here
+        color: Colors.white, //change your color here
       ),
-      elevation: 2,
+      elevation: 0,
       leadingWidth: 30,
-      backgroundColor: Color(0xff0D0B21),
+      backgroundColor: Color(0xffffffff),
       automaticallyImplyLeading: false,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           GestureDetector(
-            onTap: () {
-              Get.back();
-            },
-            child: Icon(
-              Icons.arrow_back_ios_sharp,
-              color: Colors.white,
-              size: 16,
-            ),
+              onTap: () {
+                // Get.back();
+              },
+              child: Image.asset('assets/Images/Menu.png',height: 40,width: 40,)
           ),
-          Text(
+         /* Text(
             title,
             style: TextStyle(color: Colors.white, fontSize: 18),
-          ),
-          GestureDetector(
-            onTap: () {
-              onTap();
-            },
-            child: Text(
-              sub_title,
-              style: TextStyle(color: Colors.pink, fontSize: 16),
+          ),*/
+
+
+          Row(children: <Widget>[
+            GestureDetector(
+              onTap: () {
+                //Get.back();
+              },
+              child: Icon(
+                Icons.arrow_back_ios_sharp,
+                color: Colors.black12,
+                size: 16,
+              ),
             ),
-          ),
+            GestureDetector(
+              onTap: () {
+                onTap();
+              },
+              child: Text(
+                sub_title,
+                style: TextStyle(color: Color(0xffF79534), fontSize: 16),
+              ),
+            ),
+            GestureDetector(
+              onTap: () {
+                //Get.back();
+              },
+              child: Icon(
+                Icons.arrow_forward_ios_sharp,
+                color: Colors.black12,
+                size: 16,
+              ),
+            ),
+          ],)
+
         ],
       ),
     );

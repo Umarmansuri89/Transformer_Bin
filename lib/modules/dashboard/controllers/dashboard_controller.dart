@@ -53,7 +53,7 @@ class DashboardController extends GetxController {
  final currentIndex = 0.obs;
 
   List<IconData> listOfIconsLight = [
-
+    Icons.audiotrack,
     Icons.audiotrack,
     Icons.favorite,
     Icons.audiotrack,

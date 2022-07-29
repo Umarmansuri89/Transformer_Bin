@@ -7,7 +7,7 @@ import 'package:http/http.dart' as http;
 class ApiService {
  static late final BuildContext context;
   /*-----------------SHYAM TRUST---------------------------*/
-  static final String BASE_URL = "https://eyekandy.manageprojects.in/api/";
+  static final String BASE_URL = "";
 
   static final String FAQ = "faq";
 

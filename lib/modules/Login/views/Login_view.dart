@@ -62,7 +62,7 @@ class LoginView extends GetView<LoginController> {
                               ),
                               Container(
                                 // width: MediaQuery.of(context).size.width,
-                                child: Image.asset("Images/carton.png",fit: BoxFit.cover,height: 300,width: 195,),
+                                child: Image.asset("assets/Images/carton.png",fit: BoxFit.cover,height: 300,width: 195,),
                               ),
 
                             ],),
@@ -77,7 +77,7 @@ class LoginView extends GetView<LoginController> {
                               Container(
                                 height: MediaQuery.of(context).size.height/1.7,
                                 width: double.infinity,
-                                child: Image.asset("Images/Login_Botttom.png",fit: BoxFit.fill),
+                                child: Image.asset("assets/Images/Login_Botttom.png",fit: BoxFit.fill),
                               ),
 
                             ],),

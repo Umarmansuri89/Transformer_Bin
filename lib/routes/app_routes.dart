@@ -16,6 +16,7 @@ abstract class Routes {
   static const PROFILE_DETAIL = _Paths.PROFILE_DETAIL;
   static const ADD_LISTING = _Paths.ADD_LISTING;
   static const DASHBOARD = _Paths.DASHBOARD;
+  static const DASHBOARD_SCREEN = _Paths.DASHBOARD_SCREEN;
   static const TERMS_CONDITION = _Paths.TERMS_CONDITION;
   static const FORGOT_PASSWORD = _Paths.FORGOT_PASSWORD;
   static const DISCOVER_GIRL = _Paths.DISCOVER_GIRL;
@@ -54,6 +55,7 @@ abstract class _Paths {
   static const PROFILE_DETAIL = '/profile-detail';
   static const ADD_LISTING = '/add-listing';
   static const DASHBOARD = '/dashboard';
+  static const DASHBOARD_SCREEN = '/dashboardscreen';
   static const TERMS_CONDITION = '/terms-condition';
   static const FORGOT_PASSWORD = '/forgot-password';
   static const DISCOVER_GIRL = '/discover-girl';

@@ -6,11 +6,11 @@ import 'package:get/get.dart';
 AppBar appbar(String title) => AppBar(
       iconTheme: IconThemeData(
         size: 0,
-        color: Colors.black, //change your color here
+        color: Colors.white, //change your color here
       ),
       elevation: 0,
       leadingWidth: 30,
-      backgroundColor: Color(0xff0D0B21),
+      backgroundColor: Color(0xffffffff),
       automaticallyImplyLeading: false,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

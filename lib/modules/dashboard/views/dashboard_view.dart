@@ -96,7 +96,7 @@ class _DashboardViewState extends State<DashboardView> {
                 ],
               ),
             ),
-          )
+                 )
               .toList(),
         ),
       ),
