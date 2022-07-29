@@ -1,8 +1,10 @@
+import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rounded_date_picker/flutter_rounded_date_picker.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 import '../../../routes/app_pages.dart';
 
@@ -12,8 +14,9 @@ class Deshboard_screen_Controller extends GetxController {
   var isLoading = false.obs;
   final current = 0.obs;
   final dob = "".obs;
-
-
+  final dateSelected = "".obs;
+  final GlobalKey<ExpansionTileCardState> cardA = new GlobalKey();
+  final GlobalKey<ExpansionTileCardState> cardB = new GlobalKey();
   DateTime currentDate = DateTime.now();
 
   DateTime get selectedDate =>
@@ -23,8 +26,10 @@ class Deshboard_screen_Controller extends GetxController {
   TextEditingController dobCntroller = TextEditingController(text: "");
 
 
-  selectDatedialog(context) async {
 
+
+
+  selectDatedialog(context) async {
     final DateTime? picked = await showRoundedDatePicker(
       context: context,
       initialDate: selectedDate,

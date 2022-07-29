@@ -24,7 +24,9 @@ class Burger_manu_View extends GetView<Burger_manu_Controller> {
                   // Obx(() =>
                   Container(
                     width: MediaQuery.of(context).size.width,
-                    child: Image.asset("assets/Images/Burger_backgraund.png",fit: BoxFit.fill),
+                    height: MediaQuery.of(context).size.height,
+
+                    child: Image.asset("assets/Images/Burger_backgraund.png",fit: BoxFit.fill,),
                   ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -120,7 +122,7 @@ class Burger_manu_View extends GetView<Burger_manu_Controller> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Container(
-                            height: MediaQuery.of(context).size.height/2,
+                            height: MediaQuery.of(context).size.height/4,
                             padding: EdgeInsets.only(top: 00,bottom: 20),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.end,

@@ -29,6 +29,7 @@ AppBar appbarSubTITLE(String sub_title, Function onTap) =>
           Row(children: <Widget>[
             GestureDetector(
               onTap: () {
+                onTap();
                 //Get.back();
               },
               child: Icon(
@@ -40,6 +41,7 @@ AppBar appbarSubTITLE(String sub_title, Function onTap) =>
             GestureDetector(
               onTap: () {
                 onTap();
+                print('ssssssssssssss');
               },
               child: Text(
                 sub_title,
@@ -48,6 +50,7 @@ AppBar appbarSubTITLE(String sub_title, Function onTap) =>
             ),
             GestureDetector(
               onTap: () {
+                onTap();
                 //Get.back();
               },
               child: Icon(

@@ -45,6 +45,8 @@ dependencies:
   intro_slider: ^3.0.4
   iconly: ^1.0.1
   flutter_rounded_date_picker: ^3.0.1
+  syncfusion_flutter_datepicker: ^20.2.40
+  expansion_tile_card: ^2.0.0
 
 
 flutter_launcher_name:
