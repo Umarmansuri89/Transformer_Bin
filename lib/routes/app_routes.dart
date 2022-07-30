@@ -11,6 +11,7 @@ abstract class Routes {
 
   static const REGISTRATION = _Paths.REGISTRATION;
   static const BURGER_MANU = _Paths.BURGER_MANU;
+  static const INFORMTION = _Paths.INFORMTION;
   static const ABOUTUS = _Paths.ABOUTUS;
   static const PROFILE_PAGE = _Paths.PROFILE_PAGE;
   static const PROFILE_DETAIL = _Paths.PROFILE_DETAIL;
@@ -50,6 +51,7 @@ abstract class _Paths {
   static const LOGIN = '/login';
   static const REGISTRATION = '/registration';
   static const BURGER_MANU = '/burger_manu';
+  static const INFORMTION = '/Information';
   static const ABOUTUS = '/aboutus';
   static const PROFILE_PAGE = '/profile-page';
   static const PROFILE_DETAIL = '/profile-detail';

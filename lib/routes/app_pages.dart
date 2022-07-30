@@ -2,6 +2,7 @@ import 'package:get/get.dart';
 import 'package:transformer_bin/modules/Burger_Manu/bindings/Burger_manu_binding.dart';
 import 'package:transformer_bin/modules/Burger_Manu/views/Burger_manu_view.dart';
 import 'package:transformer_bin/modules/Deshboard_screen/views/Dashboard_screen_view.dart';
+import 'package:transformer_bin/modules/Information/Views/information_view.dart';
 import '../modules/Deshboard_screen/bindings/Dashboard_screen_binding.dart';
 import '../modules/Login/bindings/Login_binding.dart';
 import '../modules/Login/views/Login_view.dart';
@@ -13,7 +14,8 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SPLASH;
+  // static const INITIAL = Routes.SPLASH;
+  static const INITIAL = Routes.INFORMTION;
 
   static final routes = [
     GetPage(
@@ -37,6 +39,12 @@ class AppPages {
     GetPage(
       name: _Paths.BURGER_MANU,
       page: () => Burger_manu_View(),
+      binding: Burger_manu_Binding(),
+    ),
+
+    GetPage(
+      name: _Paths.INFORMTION,
+      page: () => InformationView(),
       binding: Burger_manu_Binding(),
     ),
 
