@@ -3,22 +3,88 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 import '../../../global_widgets/Text_field_information.dart';
+import '../../../global_widgets/appBar_with_subtitle.dart';
+import '../../../routes/app_pages.dart';
 import '../Controller/information_controller.dart';
 
 class InformationView extends StatelessWidget {
    InformationView({Key? key}) : super(key: key);
    final _currentIndex = 0.obs;
   final controller = Get.put(Information_controler());
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     //ApiService.context = context;
     return Scaffold(
-      // appBar: appbarSubTITLE("${controller.currentDate.toString()}", onTap),
+      appBar: appbarSubTITLE("12/12/2022", onTap),
       body: Container(
         margin: EdgeInsets.all(10),
         child: ListView(
           children: [
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 10),
+              child:Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 10,
+                        backgroundColor: Colors.green,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(left: 5),
+                        child: Text("Delivered", style: TextStyle(color: Colors.green, fontSize: 12),),
+                      ),
+                      Icon(Icons.attach_file,size: 18,color: Colors.grey)
+                    ],
+                  ),
+                  Icon(Icons.arrow_back_ios_new, color: Colors.red,)
+                ],
+              ),
+            ),
+            Padding(
+                padding: EdgeInsets.symmetric(
+                    vertical: 2,
+                    horizontal: 10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text("2m leopold",style: TextStyle(color: Colors.black, fontSize: 15, fontWeight: FontWeight.bold),),
+                  Container(
+                    padding: EdgeInsets.only(left: 5, right: 5, top: 3, bottom: 3),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: Colors.deepOrange,
+                    ),
+                    child: Text("UNPAID", style: TextStyle(color: Colors.white, fontSize: 12),),
+                  )
+                ],
+              ),
+
+            ),
+      Padding(
+        padding: EdgeInsets.symmetric(
+            vertical: 2,
+            horizontal: 10),
+      child: Text("#8422", style: TextStyle(color: Colors.grey, fontSize: 10),),),
+
+            Padding(padding:EdgeInsets.symmetric(
+              vertical: 2, horizontal: 10),
+            child: Card(
+              clipBehavior: Clip.antiAliasWithSaveLayer,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15.0),
+              ),
+              child: Image.network("https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg",
+              fit: BoxFit.fill,
+              height: 180,),
+            ),),
+            Padding(padding: EdgeInsets.symmetric(vertical: 5,horizontal: 12),
+              child: Text("49 Pienza Way, Leopold", style: TextStyle(color: Colors.grey, fontSize: 12),),),
             Divider(color:Colors.deepOrange,),
             Row(
               children: [
@@ -253,7 +319,7 @@ class InformationView extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(
                   vertical: 10,
-                  horizontal: MediaQuery.of(context).size.height * 0.03),
+                  horizontal: 10),
               child: TextField_Note(
 
                 controller: controller.note_Controller,
@@ -264,11 +330,12 @@ class InformationView extends StatelessWidget {
                 //   }
                 //   return null;
                 // },
-                maxLines: 2,
+
+                maxLines: 7,
                 fontSize: 14,
                 maxLength: 50,
-                minLines: 2,
-                hintText: "E-mail",
+                minLines: 1,
+                hintText: " ",
                 hintStyle: Color(0xffCCD2E3),
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 readOnly: false,
@@ -281,6 +348,58 @@ class InformationView extends StatelessWidget {
                 // ),
               ),
             ),
+            Row(
+              children: [
+                Container(
+
+                  padding: EdgeInsets.only(left: 5, right: 5, top: 3, bottom: 3),
+                  margin: EdgeInsets.only(left: 10, top: 0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    color: Colors.deepOrange,
+                  ),
+                  child: Text("LOG NOTE",style: TextStyle(color: Colors.white, fontSize: 9),),
+                )
+              ],
+            ),
+
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 15, left: 10, bottom: 5),
+                    child: Text("02/12/2022", style: TextStyle(color: Colors.black, fontSize: 14),),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 15, right: 10, bottom: 5),
+                    child: Text("Lorem ipsum dolor sit", style: TextStyle(color: Colors.black, fontSize: 14),),
+                  ),
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 5, left: 10, bottom: 10),
+                    child: Text("02/12/2022", style: TextStyle(color: Colors.black, fontSize: 14),),
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    margin: EdgeInsets.only(top: 5, right: 10, bottom: 10),
+                    child: Text("Lorem ipsum dolor sit", style: TextStyle(color: Colors.black, fontSize: 14),),
+                  ),
+                )
+              ],
+            ),
+
 
           ],
 
@@ -289,6 +408,9 @@ class InformationView extends StatelessWidget {
     );
 
   }
+}
+onTap() {
+  Get.toNamed(Routes.LOGIN);
 }
 
 
