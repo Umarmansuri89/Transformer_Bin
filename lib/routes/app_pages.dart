@@ -18,6 +18,7 @@ class AppPages {
   static const INITIAL = Routes.INFORMTION;
 
   static final routes = [
+
     GetPage(
       name: _Paths.SPLASH,
       page: () => LoginView(),

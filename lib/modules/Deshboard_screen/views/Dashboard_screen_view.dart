@@ -307,7 +307,6 @@ These buttons control the next card down!""",
                          ],
                        ),
                       ),
-
 //                       Padding(
 //                         padding: EdgeInsets.only(left: 20,right: 20,top: 20),
 //                        child: Card(
@@ -453,19 +452,8 @@ These buttons control the next card down!""",
 //                       ),
 //                       )
 
-
                       ],
                     )
-
-
-
-
-
-
-
-
-
-
     );
   }
 
