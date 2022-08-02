@@ -16,9 +16,9 @@ class TextFieldSettingDesigned extends StatelessWidget {
   final TextAlign textAlign;
   final double fontSize;
   final FontWeight fontWeight;
-  late final String? counterText;
+  final String? counterText;
 
-  TextFieldSettingDesigned({
+  const TextFieldSettingDesigned({
     this.onTap,
     this.readOnly = false,
     this.hintStyle,
@@ -56,7 +56,7 @@ class TextFieldSettingDesigned extends StatelessWidget {
           style: TextStyle(
             fontSize: fontSize,
             fontWeight: fontWeight,
-            color: Color(0xffE6E3FF),
+            color: const Color(0xffE6E3FF),
           ),
           decoration: InputDecoration(
             hintStyle: TextStyle(
@@ -66,7 +66,7 @@ class TextFieldSettingDesigned extends StatelessWidget {
             filled: true,
             counterText: counterText,
             hintText: hintText,
-            suffixIcon: Icon(
+            suffixIcon: const Icon(
               Icons.keyboard_arrow_right,
               color: Color(0xffCCD2E3),
             ),
@@ -77,7 +77,7 @@ class TextFieldSettingDesigned extends StatelessWidget {
             disabledBorder: InputBorder.none,
 
 
-            contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+            contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
             fillColor: Colors.transparent,
           ),
         ),
@@ -85,7 +85,7 @@ class TextFieldSettingDesigned extends StatelessWidget {
           padding: const EdgeInsets.only(left: 50.0, top: 40),
           child: Container(
             height: 0.5,
-            color: Color(0xff36325A),
+            color: const Color(0xff36325A),
             width: double.infinity,
           ),
         )
@@ -100,7 +100,7 @@ class TextFieldSettingDesigned extends StatelessWidget {
     if (isFocused && currentLength > 0) {
       return Text('$currentLength / $maxLength');
     } else {
-      return Text("");
+      return const Text("");
     }
   }
 }

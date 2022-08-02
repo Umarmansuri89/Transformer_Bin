@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
@@ -19,8 +18,8 @@ class DecorationLocal {
           borderRadius: const BorderRadius.all(Radius.circular(8)),
           borderSide: BorderSide(color: Colors.grey.shade300),
         ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: const BorderRadius.all(Radius.circular(8)),
+        focusedBorder: const OutlineInputBorder(
+          borderRadius: BorderRadius.all(Radius.circular(8)),
           borderSide: BorderSide(color: Colors.amber),
         ),
         errorBorder: const OutlineInputBorder(

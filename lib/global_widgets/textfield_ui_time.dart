@@ -19,9 +19,9 @@ class TextFieldTimeDesigned extends StatelessWidget {
   final FontWeight fontWeight;
   final Color? fillColorhere;
 
-  late final String? counterText;
+  final String? counterText;
 
-  TextFieldTimeDesigned({
+  const TextFieldTimeDesigned({
     this.onTap,
     this.readOnly = false,
     this.controller,
@@ -63,7 +63,7 @@ class TextFieldTimeDesigned extends StatelessWidget {
         style: TextStyle(
           fontSize: fontSize,
           fontWeight: fontWeight,
-          color: Color(0xffFFFFFF),
+          color: const Color(0xffFFFFFF),
         ),
         decoration: InputDecoration(
             hintStyle: TextStyle(
@@ -74,18 +74,18 @@ class TextFieldTimeDesigned extends StatelessWidget {
             counterText: counterText,
             hintText: hintText,
             suffixIcon: suffixIcon,
-            contentPadding: EdgeInsets.fromLTRB(0, 10, 0, 0),
+            contentPadding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color(0xff6EBE30)),
+              borderSide: const BorderSide(color: Color(0xff6EBE30)),
               //36325A
               borderRadius: BorderRadius.circular(15),
             ),
             focusedErrorBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color(0xff6EBE30)),
+              borderSide: const BorderSide(color: Color(0xff6EBE30)),
               borderRadius: BorderRadius.circular(15),
             ),
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color(0xff6EBE30)),
+              borderSide: const BorderSide(color: Color(0xff6EBE30)),
               borderRadius: BorderRadius.circular(15),
             ),
             fillColor: fillColorhere),
@@ -100,7 +100,7 @@ class TextFieldTimeDesigned extends StatelessWidget {
     if (isFocused && currentLength > 0) {
       return Text('$currentLength / $maxLength');
     } else {
-      return Text("");
+      return const Text("");
     }
   }
 }

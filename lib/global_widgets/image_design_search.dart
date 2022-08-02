@@ -1,25 +1,24 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../utils/image_helper.dart';
 
 // Note : photo video app bar worked diffrently
-ClipRRect ImageDesignSearch(double height, double width, String img_url,
-        double borderRadius, String default_img) =>
+ClipRRect ImageDesignSearch(double height, double width, String imgUrl,
+        double borderRadius, String defaultImg) =>
     ClipRRect(
         borderRadius: BorderRadius.circular(borderRadius),
-        child: (identical(img_url, 'show_more'))
+        child: (identical(imgUrl, 'show_more'))
             ? Image(
                 fit: BoxFit.fill,
                 height: height,
                 width: width,
                 color: Colors.amber,
-                image: AssetImage(DOWN_IMAGE),
+                image: const AssetImage(DOWN_IMAGE),
               )
             : Image(
                 errorBuilder: (BuildContext context, Object exception,
                     StackTrace? stackTrace) {
                   return Image.asset(
-                    default_img,
+                    defaultImg,
                     height: 30,
                     width: 30,
                   );
@@ -27,5 +26,5 @@ ClipRRect ImageDesignSearch(double height, double width, String img_url,
                 fit: BoxFit.fill,
                 height: height,
                 width: width,
-                image: NetworkImage(img_url),
+                image: NetworkImage(imgUrl),
               ));

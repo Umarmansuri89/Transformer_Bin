@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
 
 import '../utils/image_helper.dart';
 
@@ -13,7 +12,7 @@ class NumericStepButton extends StatefulWidget {
   final Color color;
   final ValueChanged<int?> onChanged;
   //ShowTypeController controller = Get.put(ShowTypeController());
-  NumericStepButton({
+  const NumericStepButton({
     Key? key,
     this.minValue = 0,
     this.maxValue = 100000,
@@ -104,7 +103,7 @@ class _NumericStepButtonState extends State<NumericStepButton> {
         width: 20,
       ));
 
-  Container textFormFieldWidget() => Container(
+  SizedBox textFormFieldWidget() => SizedBox(
       height: 30,
       width: 30,
       child: Center(

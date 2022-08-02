@@ -1,15 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-AppBar appbarSubTITLE_one(String title, String sub_title, Function onTap) =>
+AppBar appbarSubTITLE_one(String title, String subTitle, Function onTap) =>
     AppBar(
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         color: Colors.black, //change your color here
       ),
       elevation: 2,
       leadingWidth: 30,
-      backgroundColor: Color(0xff0D0B21),
+      backgroundColor: const Color(0xff0D0B21),
       automaticallyImplyLeading: false,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -22,15 +21,15 @@ AppBar appbarSubTITLE_one(String title, String sub_title, Function onTap) =>
           ),
           Text(
             title,
-            style: TextStyle(color: Colors.white, fontSize: 18),
+            style: const TextStyle(color: Colors.white, fontSize: 18),
           ),
           GestureDetector(
             onTap: () {
               onTap();
             },
             child: Text(
-              sub_title,
-              style: TextStyle(color: Colors.pink, fontSize: 16),
+              subTitle,
+              style: const TextStyle(color: Colors.pink, fontSize: 16),
             ),
           ),
         ],

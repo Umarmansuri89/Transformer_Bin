@@ -18,9 +18,9 @@ class TextFieldDesigned extends StatelessWidget {
   final TextAlign textAlign;
   final double fontSize;
   final FontWeight fontWeight;
-  late final String? counterText;
+  final String? counterText;
 
-  TextFieldDesigned({
+  const TextFieldDesigned({
     this.onTap,
     this.readOnly = false,
     this.obscureText = false,
@@ -62,7 +62,7 @@ class TextFieldDesigned extends StatelessWidget {
       style: TextStyle(
         fontSize: fontSize,
         fontWeight: fontWeight,
-        color: Color(0xff000000),
+        color: const Color(0xff000000),
       ),
       decoration: InputDecoration(
         hintStyle: TextStyle(
@@ -74,23 +74,23 @@ class TextFieldDesigned extends StatelessWidget {
         hintText: hintText,
         suffixIcon: suffixIcon,
         enabledBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xffffffff)),
+          borderSide: const BorderSide(color: Color(0xffffffff)),
           //36325A
           borderRadius: BorderRadius.circular(10),
         ),
         errorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xffFF0000)),
+          borderSide: const BorderSide(color: Color(0xffFF0000)),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xffFF0000)),
+          borderSide: const BorderSide(color: Color(0xffFF0000)),
           borderRadius: BorderRadius.circular(10),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: Color(0xffffffff)),
+          borderSide: const BorderSide(color: Color(0xffffffff)),
           borderRadius: BorderRadius.circular(10),
         ),
-        contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        contentPadding: const EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         fillColor: Colors.white,
       ),
     );
@@ -103,7 +103,7 @@ class TextFieldDesigned extends StatelessWidget {
     if (isFocused && currentLength > 0) {
       return Text('$currentLength / $maxLength');
     } else {
-      return Text("");
+      return const Text("");
     }
   }
 }

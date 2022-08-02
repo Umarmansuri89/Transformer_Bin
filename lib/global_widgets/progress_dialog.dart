@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 import 'package:get/get.dart';
 
-import '../utils/image_helper.dart';
 
 
 enum ProgressDialogType { Normal, Download }
@@ -146,7 +144,7 @@ class ProgressDialog {
               child: Dialog(
                   backgroundColor: _backgroundColor,
                   insetAnimationCurve: _insetAnimCurve,
-                  insetAnimationDuration: Duration(milliseconds: 100),
+                  insetAnimationDuration: const Duration(milliseconds: 100),
                   elevation: _dialogElevation,
                   shape: RoundedRectangleBorder(
                       borderRadius:
@@ -204,7 +202,7 @@ class _BodyState extends State<_Body> {
   Widget build(BuildContext context) {
     final loader = Align(
       alignment: _progressWidgetAlignment,
-      child: SizedBox(
+      child: const SizedBox(
         width: 0.0,
         height: 0.0,
       //  child: _progressWidget,

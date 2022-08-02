@@ -3,19 +3,28 @@ import 'package:transformer_bin/modules/Burger_Manu/bindings/Burger_manu_binding
 import 'package:transformer_bin/modules/Burger_Manu/views/Burger_manu_view.dart';
 import 'package:transformer_bin/modules/Deshboard_screen/views/Dashboard_screen_view.dart';
 import 'package:transformer_bin/modules/Information/Views/information_view.dart';
+import 'package:transformer_bin/modules/Information/bindings/information_biding.dart';
+import 'package:transformer_bin/modules/Job_Type/bindings/Jobtype_binding.dart';
+import 'package:transformer_bin/modules/Job_Type/views/Jobtype_view.dart';
+import 'package:transformer_bin/modules/Payment_due/binding/Payment_due_binding.dart';
+import 'package:transformer_bin/modules/Schedule/bindings/Schedule_binding.dart';
 import '../modules/Deshboard_screen/bindings/Dashboard_screen_binding.dart';
 import '../modules/Login/bindings/Login_binding.dart';
 import '../modules/Login/views/Login_view.dart';
+import '../modules/Payment_due/view/Payment_due_view.dart';
+import '../modules/SCHED/bindings/SCHED_binding.dart';
+import '../modules/SCHED/views/SCHED_views.dart';
+import '../modules/Schedule/views/Schedule_View.dart';
 import '../modules/dashboard/bindings/dashboard_binding.dart';
 import '../modules/dashboard/views/dashboard_view.dart';
-
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  // static const INITIAL = Routes.SPLASH;
-  static const INITIAL = Routes.INFORMTION;
+  static const INITIAL = Routes.SPLASH;
+  // static const INITIAL = Routes.INFORMTION;
+  // static const INITIAL = Routes.JOBTYPE;
 
   static final routes = [
 
@@ -27,7 +36,7 @@ class AppPages {
 
     GetPage(
       name: _Paths.DASHBOARD,
-      page: () => DashboardView(),
+      page: () => const DashboardView(),
       binding: DashboardBinding(),
     ),
 
@@ -46,7 +55,31 @@ class AppPages {
     GetPage(
       name: _Paths.INFORMTION,
       page: () => InformationView(),
-      binding: Burger_manu_Binding(),
+      binding: Information_Binding(),
+    ),
+
+    GetPage(
+      name: _Paths.PAYMENT_DUE,
+      page: () => Payment_due_view(),
+      binding: Payment_due_Binding(),
+    ),
+
+    GetPage(
+      name: _Paths.SCHEDULE,
+      page: () => Schedule_View(),
+      binding: Schedule_Binding(),
+    ),
+
+    GetPage(
+      name: _Paths.SCHED,
+      page: () => SCHED_view(),
+      binding: SCHED_Binding(),
+    ),
+
+    GetPage(
+      name: _Paths.JOBTYPE,
+      page: () => JobtypeView(),
+      binding: Jobtype_Binding(),
     ),
 
     /*GetPage(
@@ -202,5 +235,6 @@ class AppPages {
       page: () => PaymentSuccess1(),
       binding: PaymentSuccessBinding(),
     ),*/
+
   ];
 }

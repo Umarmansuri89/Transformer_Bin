@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../utils/image_helper.dart';
 
@@ -21,7 +20,7 @@ buildLoading(BuildContext context) {
                           width: 30.0,
                           child: Transform.scale(
                             scale: 2,
-                            child: CircularProgressIndicator(
+                            child: const CircularProgressIndicator(
                               strokeWidth: 2,
                               valueColor:
                                   AlwaysStoppedAnimation<Color>(Colors.amber),
@@ -29,7 +28,7 @@ buildLoading(BuildContext context) {
                           ),
                         ),
                       ),
-                      Image(
+                      const Image(
                         image: AssetImage(LOGO_LAUNCHER_TRANS),
                         height: 0,
                         fit: BoxFit.fill,

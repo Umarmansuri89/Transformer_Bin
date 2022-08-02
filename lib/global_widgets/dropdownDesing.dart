@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DropDownDemo extends StatefulWidget {
@@ -13,7 +12,7 @@ class _DropDownDemoState extends State<DropDownDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('DropDown'),
+        title: const Text('DropDown'),
       ),
       body: Center(
         child: Container(
@@ -21,7 +20,7 @@ class _DropDownDemoState extends State<DropDownDemo> {
           child: DropdownButton(
             value: "_chosenValue",
             //elevation: 5,
-            style: TextStyle(color: Colors.black),
+            style: const TextStyle(color: Colors.black),
 
             items: <String>[
               'Android',
@@ -37,7 +36,7 @@ class _DropDownDemoState extends State<DropDownDemo> {
                 child: Text(value),
               );
             }).toList(),
-            hint: Text(
+            hint: const Text(
               "Please choose a langauage",
               style: TextStyle(
                   color: Colors.black,

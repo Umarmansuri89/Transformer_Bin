@@ -10,7 +10,7 @@ class TextButtonDesign extends StatelessWidget {
   final Color fontColor;
   final Function()? onSubmit;
 
-  TextButtonDesign({
+  const TextButtonDesign({
     required this.onSubmit,
     this.fontColor = Colors.white,
     this.backgroundColor,
@@ -26,7 +26,7 @@ class TextButtonDesign extends StatelessWidget {
         child: SizedBox(
           height: 20,
           width: 20,
-          child: const CircularProgressIndicator(
+          child: CircularProgressIndicator(
             strokeWidth: 2,
             valueColor: AlwaysStoppedAnimation<Color>(Colors.white), //done
           ),

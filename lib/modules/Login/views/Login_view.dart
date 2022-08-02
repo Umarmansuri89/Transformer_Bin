@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:transformer_bin/modules/SCHED/views/SCHED_views.dart';
+import 'package:transformer_bin/routes/app_pages.dart';
 import '../../../global_widgets/textButtonDesign.dart';
 import '../../../global_widgets/textEnter.dart';
 import '../../../global_widgets/textfield_ui.dart';
@@ -13,51 +15,51 @@ class LoginView extends GetView<LoginController> {
   Widget build(BuildContext context) {
     return Scaffold(
      // color: Color(0xff0D0B21),
-      body :
-      Container(
+      body : Container(
         child: Obx(() {
           if (controller.isLoading.value) {
-            return Center(
+            return const Center(
                 child: CupertinoActivityIndicator()
             );
-          } else {
+          }
+          else {
             return Stack(
                 children: [
                   // Obx(() =>
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width,
-                    child: Image.asset("Images/login_background.png",fit: BoxFit.fill),
+                    child: Image.asset("assets/Images/login_background.png",fit: BoxFit.fill),
                   ),
                   Stack(
                     // alignment: AlignmentDirectional.topCenter,
                     children: <Widget>[
                       Column(
                         children: <Widget>[
-                          Center(
+                          const Center(
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 0.0),
+                              padding: EdgeInsets.only(left: 0.0),
                               child: TextFieldShow(
                                 height: 05,
                                 text: "TRANSFORMER BIN HIRE",
                                 color: Color(0xFF333333),
-                                fontsize: 20,
+                                fontsize: 30,
                                 fontFamily: 'Lato',
-                                fontWeight: FontWeight.w100,
+                                fontWeight: FontWeight.w400,
                               ),
                             ),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10.0),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 10.0),
                                 child: TextFieldShow(
                                   height: 2,
                                   text: "Hello!",
                                   color: Color(0xFFF79534),
-                                  fontsize: 60,
+                                  fontsize: 69,
                                   fontFamily: 'Lato',
-                                  fontWeight: FontWeight.w100,
+                                  fontWeight: FontWeight.w600,
                                 ),
                               ),
                               Container(
@@ -74,7 +76,7 @@ class LoginView extends GetView<LoginController> {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children:<Widget> [
-                              Container(
+                              SizedBox(
                                 height: MediaQuery.of(context).size.height/1.7,
                                 width: double.infinity,
                                 child: Image.asset("assets/Images/Login_Botttom.png",fit: BoxFit.fill),
@@ -104,7 +106,7 @@ class LoginView extends GetView<LoginController> {
                                   maxLength: 50,
                                   minLines: 1,
                                   hintText: "E-mail",
-                                  hintStyle: Color(0xffCCD2E3),
+                                  hintStyle: const Color(0xffCCD2E3),
                                   autovalidateMode: AutovalidateMode.onUserInteraction,
                                   readOnly: false,
                                   keyboardType: TextInputType.text,
@@ -129,25 +131,25 @@ class LoginView extends GetView<LoginController> {
                                     },
                                     cursorColor: Colors.white,
                                     //maxLength: 20,
-                                    style: TextStyle(color: Color(0xff000000)),
+                                    style: const TextStyle(color: Color(0xff000000)),
                                     controller: controller.passwordcontroller,
                                     obscureText: controller.obscureNewPass.value,
                                     decoration: InputDecoration(
                                       focusedErrorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(color: Color(0xffffffff)),
+                                        borderSide: const BorderSide(color: Color(0xffffffff)),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       focusedBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(color: Color(0xffffffff)),
+                                        borderSide: const BorderSide(color: Color(0xffffffff)),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       enabledBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(color: Color(0xffffffff)),
+                                        borderSide: const BorderSide(color: Color(0xffffffff)),
                                         //36325A
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       errorBorder: OutlineInputBorder(
-                                        borderSide: BorderSide(color: Color(0xffffffff)),
+                                        borderSide: const BorderSide(color: Color(0xffffffff)),
                                         borderRadius: BorderRadius.circular(10),
                                       ),
                                       border: InputBorder.none,
@@ -156,12 +158,12 @@ class LoginView extends GetView<LoginController> {
                                       //   color: Color(0xffCCD2E3),
                                       //   size: 16.0,
                                       // ),
-                                      contentPadding: EdgeInsets.only(
+                                      contentPadding: const EdgeInsets.only(
                                           left: 15, top: 13, bottom: 0, right: 15),
                                       filled: true,
-                                      fillColor: Color(0xffffffff),
+                                      fillColor: const Color(0xffffffff),
                                       hintText: 'Password'.tr,
-                                      hintStyle: TextStyle(fontSize: 14.0, color:Color(0xffCCD2E3)),
+                                      hintStyle: const TextStyle(fontSize: 14.0, color:Color(0xffCCD2E3)),
                                       suffixIcon: GestureDetector(
                                         behavior: HitTestBehavior.translucent,
                                         onTap: () {
@@ -173,7 +175,7 @@ class LoginView extends GetView<LoginController> {
                                               ? Icons.remove_red_eye_outlined
                                               : Icons.remove_red_eye,
                                           size: 24,
-                                          color: Color.fromRGBO(142, 153, 183, 0.5),
+                                          color: const Color.fromRGBO(142, 153, 183, 0.5),
                                         ),
                                       ),
 
@@ -182,13 +184,13 @@ class LoginView extends GetView<LoginController> {
                               ),
                               Padding(
                                 padding: EdgeInsets.only(
-                                    top: 1.0, right: MediaQuery.of(context).size.height * 0.04),
+                                    top: 1.0, right: MediaQuery.of(context).size.height * 0.032),
                                 child: GestureDetector(
                                   // onTap: () => controller.onforgetPassword(),
                                   child: Row(
                                     // crossAxisAlignment: CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
+                                    children: const [
                                       TextFieldShow(
                                         textAlign: TextAlign.end,
                                         text: "Forgot password ?",
@@ -217,6 +219,8 @@ class LoginView extends GetView<LoginController> {
                                         text: 'Login',
                                         onSubmit: () {
                                           controller.onLogin();
+                                          // Get.to(SCHED_view());
+
                                           },
                                       )
                                   ))

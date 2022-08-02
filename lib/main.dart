@@ -1,6 +1,4 @@
-
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:transformer_bin/routes/app_pages.dart';
@@ -17,14 +15,13 @@ class MyHttpOverrides extends HttpOverrides{
 
 Future<void> main() async {
 
-
   /* await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]);*/
 
 
-  HttpOverrides.global = new MyHttpOverrides();
+  HttpOverrides.global = MyHttpOverrides();
   WidgetsFlutterBinding.ensureInitialized();
 
   runApp(
@@ -38,10 +35,9 @@ Future<void> main() async {
         /* scaffoldBackgroundColor: const Color(0xFFEFEFEF),*/
           scaffoldBackgroundColor: Colors.white,
           visualDensity: VisualDensity.adaptivePlatformDensity,
-          primaryColor: Color(0xff0D0B21),
-          accentColor: Colors.white,
+          primaryColor: const Color(0xff0D0B21),
           textSelectionTheme:
-          TextSelectionThemeData(cursorColor: Colors.black)),
+          const TextSelectionThemeData(cursorColor: Colors.black), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.white)),
     ),
   );
 }

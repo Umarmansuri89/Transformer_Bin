@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconly/iconly.dart';
@@ -31,18 +30,18 @@ class DashboardController extends GetxController {
 
   final List screens = [
     HomeView(),
-    Scaffold(
+    const Scaffold(
       body: Center(
         child: Text('B'),
       ),
     ),
    // AnalyticsScreen(),
-    Scaffold(
+    const Scaffold(
       body: Center(
         child: Text('C'),
       ),
     ),
-    Scaffold(
+    const Scaffold(
       body: Center(
         child: Text('D'),
       ),

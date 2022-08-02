@@ -19,9 +19,9 @@ class TextField_Note extends StatelessWidget {
   final FontWeight fontWeight;
   final Color? fillColorhere;
 
-  late final String? counterText;
+  final String? counterText;
 
-  TextField_Note({
+  const TextField_Note({
     this.onTap,
     this.readOnly = false,
     this.controller,
@@ -45,7 +45,7 @@ class TextField_Note extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       // height: 130,
       width: MediaQuery.of(context).size.width-50,
       child: TextFormField(
@@ -55,7 +55,7 @@ class TextField_Note extends StatelessWidget {
         maxLines: 5,
         decoration: InputDecoration(
           focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Colors.black),
+            borderSide: const BorderSide(color: Colors.grey),
             borderRadius: BorderRadius.circular(10.0),
           ),
 
@@ -66,7 +66,7 @@ class TextField_Note extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
           ),
 
-          contentPadding: EdgeInsets.symmetric(vertical: 14,
+          contentPadding: const EdgeInsets.symmetric(vertical: 14,
               horizontal: 10),
 
 
@@ -140,7 +140,7 @@ class TextField_Note extends StatelessWidget {
     if (isFocused && currentLength > 0) {
       return Text('$currentLength / $maxLength');
     } else {
-      return Text("");
+      return const Text("");
     }
   }
 }

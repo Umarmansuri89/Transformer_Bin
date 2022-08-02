@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 
 class TextFieldShow extends StatelessWidget {
   final String text;
@@ -13,7 +12,7 @@ class TextFieldShow extends StatelessWidget {
   final TextDecoration decoration;
   final TextAlign textAlign;
 
-  TextFieldShow({
+  const TextFieldShow({
     this.text = "",
     this.fontFamily = "Lato",
     this.color = Colors.black87,
@@ -29,12 +28,13 @@ class TextFieldShow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 5.0),
-      child: Text(
-        text,
+      padding: EdgeInsets.only(bottom: 5.0),
+
+      child: Text(text,
           maxLines: maxLines == 0 ? null : maxLines,
           textAlign: textAlign,
           overflow: TextOverflow.ellipsis,
+
           style: TextStyle(
             fontFamily: fontFamily,
             color: color,

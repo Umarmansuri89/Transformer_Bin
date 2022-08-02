@@ -9,7 +9,7 @@ class SearchBarDesing extends StatelessWidget {
   final TextEditingController? controller;
   final ValueChanged<String>? onSearchTextChange;
 
-  SearchBarDesing({
+  const SearchBarDesing({
     required this.height,
     required this.readOnly,
     this.onTap,
@@ -24,7 +24,7 @@ class SearchBarDesing extends StatelessWidget {
       padding: const EdgeInsets.only(top: 10.0, bottom: 8, left: 15, right: 15),
       child: Container(
         width: double.infinity,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(image: AssetImage(RECTANGLE_CITY)),
         ),
         height: height,
@@ -33,7 +33,7 @@ class SearchBarDesing extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const SizedBox(width: 20),
-            Icon(
+            const Icon(
               Icons.search,
               color: Colors.white,
             ),
@@ -51,7 +51,7 @@ class SearchBarDesing extends StatelessWidget {
                   hintStyle: TextStyle(color: Colors.white),
                   border: InputBorder.none,
                 ),
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.white,
                 ),
                 readOnly: readOnly,
